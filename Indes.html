@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>I Love U Parii</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe Script', cursive, sans-serif;
+      min-height: 100vh;
+      background: url('https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transition: background 1s;
+    }
+    .container {
+      background: rgba(255, 255, 255, 0.7);
+      border-radius: 25px;
+      padding: 40px 30px;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.18);
+      text-align: center;
+    }
+    .title {
+      font-size: 2.6rem;
+      color: #d72660;
+      margin-bottom: 30px;
+      letter-spacing: 2px;
+      text-shadow: 1px 2px 8px #fff3;
+    }
+    .rose-btn {
+      background: linear-gradient(90deg, #fb7185, #a21caf);
+      color: white;
+      border: none;
+      border-radius: 50px;
+      font-size: 1.25rem;
+      padding: 12px 38px 12px 24px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 4px 12px rgba(230, 57, 70, 0.15);
+      transition: background 0.3s, transform 0.2s;
+      margin: 0 auto;
+    }
+    .rose-btn:hover {
+      background: linear-gradient(90deg, #f43f5e, #7e22ce);
+      transform: scale(1.05);
+    }
+    .love-letter {
+      display: none;
+      margin-top: 38px;
+      background: rgba(255,255,255,0.95);
+      border-radius: 22px;
+      padding: 36px 28px;
+      box-shadow: 0 6px 30px rgba(220, 20, 60, 0.10);
+      font-size: 1.1rem;
+      color: #5f1d2e;
+      position: relative;
+      z-index: 3;
+      animation: fadeIn 1s;
+    }
+    .flower-bg {
+      position: absolute;
+      z-index: 0;
+      top: 0; left: 0; right: 0; bottom: 0;
+      opacity: 0.22;
+      pointer-events: none;
+      background: url('https://png.pngtree.com/png-clipart/20230812/original/pngtree-rose-flower-clipart-png-image_10012187.png') center/cover no-repeat;
+      border-radius: 22px;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(40px);}
+      to { opacity: 1; transform: translateY(0);}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="title">i love u parii</div>
+    <button class="rose-btn" id="roseBtn">
+      🌹 Click the Rose
+    </button>
+    <div class="love-letter" id="loveLetter">
+      <div class="flower-bg"></div>
+      <div style="position:relative; z-index:1;">
+        <h2 style="color:#d72660; margin-bottom:16px;">To My Dearest Parii,</h2>
+        <p>
+          Every day, my love for you grows stronger and brighter, just like a field full of blooming flowers. <br>
+          With every heartbeat, I am reminded how lucky I am to have you in my life.<br>
+          <br>
+          You are my sunshine, my best friend, my everything. <br>
+          Thank you for being you, for your laughter, your kindness, and your endless love.<br>
+          <br>
+          Forever yours,<br>
+          <b>Farzan</b> 💌
+        </p>
+      </div>
+    </div>
+  </div>
+  <script>
+    document.getElementById('roseBtn').onclick = function() {
+      document.getElementById('loveLetter').style.display = 'block';
+      window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>
